@@ -4,7 +4,7 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
   const phoneNumber = document.getElementById("phone-number");
   const pin = document.getElementById("pin-code");
 
-  if (phoneNumber.value === "01953918566" && pin.value === "9332") {
+  if (phoneNumber.value === "01953918566" && pin.value === "1234") {
     window.location.href = "/home.html"
   } else {
     alert("Error! Invalid number or Password. Try again");
