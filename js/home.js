@@ -22,26 +22,16 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
   // ADD MONEY AMOUNT
   const addMoneyAmountStr = document.getElementById('add-money-amount').value;
   const addMoneyAmount = parseFloat(addMoneyAmountStr);
+  
 // PIN
   const addMoneyPin = document.getElementById('add-money-pin').value;
 // VALIDATION
 if (addMoneyPin === '9332') {
   // NEW/UPDATED BALANCE
   const newBalance = availableBalance + addMoneyAmount;
-  availableBalanceStr.innerText = newBalance;
+  document.getElementById('available-balance').innerText = newBalance;
+ 
 } else {
   alert('Your Pin is incorrect :( Try again.')
 }
 })
-
-//
-//       if (!isNaN(addAmount) && addAmount > 0) {
-//         const newBalance = availableBalance + addAmount;
-//         availableBalanceElement.innerText = newBalance.toFixed(2); // update the displayed balance
-//       } else {
-//         alert("Please enter a valid amount to add");
-//       }
-//     } else {
-//       alert("Wrong Number or Pin, Try again");
-//     }
-//   });
