@@ -14,11 +14,12 @@ const btnWithdraw = document
   });
 
 // MAIN OPERATIONS
+
 // INITIAL BALANCE
 const availableBalanceStr =
   document.getElementById("available-balance").innerText;
 const availableBalance = parseFloat(availableBalanceStr); // Converted string to number
-// ======================
+// ADD MONEY EVENT HANDLER
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (event) {
@@ -40,7 +41,7 @@ document
     }
   });
 
-// WITHDRAW
+// WITHDRAW EVENT HANDLER
 
 document
   .getElementById("withdraw-btn")
@@ -49,6 +50,7 @@ document
 
     const withdrawAmountStr = document.getElementById("withdraw-amount").value;
     const withdrawAmount = parseFloat(withdrawAmountStr);
+    const withdrawPin = document.getElementById('withdraw-money-pin').value;
     if (withdrawPin === "1234") {
       // NEW/UPDATED BALANCE
       const newBalance = availableBalance - withdrawAmount;
