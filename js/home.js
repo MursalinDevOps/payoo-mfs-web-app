@@ -41,7 +41,7 @@ document
     }
   });
 
-// WITHDRAW EVENT HANDLER
+// WITHDRAW EVENT HANDLER`
 
 document
   .getElementById("withdraw-btn")
@@ -50,7 +50,7 @@ document
 
     const withdrawAmountStr = document.getElementById("withdraw-amount").value;
     const withdrawAmount = parseFloat(withdrawAmountStr);
-    const withdrawPin = document.getElementById('withdraw-money-pin').value;
+    const withdrawPin = document.getElementById("withdraw-money-pin").value;
     if (withdrawPin === "1234") {
       // NEW/UPDATED BALANCE
       const newBalance = availableBalance - withdrawAmount;
