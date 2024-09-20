@@ -14,24 +14,46 @@ const btnWithdraw = document
   });
 
 // MAIN OPERATIONS
-document.getElementById('add-money-btn').addEventListener('click', function(event){
-  event.preventDefault();
-  // INITIAL BALANCE
-  const availableBalanceStr = document.getElementById('available-balance').innerText;
-  const availableBalance = parseFloat(availableBalanceStr); // Converted string to number
-  // ADD MONEY AMOUNT
-  const addMoneyAmountStr = document.getElementById('add-money-amount').value;
-  const addMoneyAmount = parseFloat(addMoneyAmountStr);
-  
-// PIN
-  const addMoneyPin = document.getElementById('add-money-pin').value;
-// VALIDATION
-if (addMoneyPin === '9332') {
-  // NEW/UPDATED BALANCE
-  const newBalance = availableBalance + addMoneyAmount;
-  document.getElementById('available-balance').innerText = newBalance;
- 
-} else {
-  alert('Your Pin is incorrect :( Try again.')
-}
-})
+// INITIAL BALANCE
+const availableBalanceStr =
+  document.getElementById("available-balance").innerText;
+const availableBalance = parseFloat(availableBalanceStr); // Converted string to number
+// ======================
+document
+  .getElementById("add-money-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // ADD MONEY AMOUNT
+
+    const addMoneyAmountStr = document.getElementById("add-money-amount").value;
+    const addMoneyAmount = parseFloat(addMoneyAmountStr);
+    // PIN
+    const addMoneyPin = document.getElementById("add-money-pin").value;
+    // ADD MONEY VALIDATION
+    if (addMoneyPin === "1234") {
+      // NEW/UPDATED BALANCE
+      const newBalance = availableBalance + addMoneyAmount;
+      document.getElementById("available-balance").innerText = newBalance;
+    } else {
+      alert("Your Pin is incorrect :( Try again.");
+    }
+  });
+
+// WITHDRAW
+
+document
+  .getElementById("withdraw-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const withdrawAmountStr = document.getElementById("withdraw-amount").value;
+    const withdrawAmount = parseFloat(withdrawAmountStr);
+    if (withdrawPin === "1234") {
+      // NEW/UPDATED BALANCE
+      const newBalance = availableBalance - withdrawAmount;
+      document.getElementById("available-balance").innerText = newBalance;
+    } else {
+      alert("Your Pin is incorrect :( Try again.");
+    }
+  });
